@@ -42,4 +42,4 @@ jobs:
         run: cat myidentity.json
        
       - name: Ejecutar el Edge client
-        run: ziti-edge-tunnel run --identity-dir ./
+        run: ./ziti-edge-tunnel run --identity-dir ./
