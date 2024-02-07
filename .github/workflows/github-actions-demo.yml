@@ -45,7 +45,7 @@ jobs:
         run: ./ziti-edge-tunnel add myidentity.json
         
       - name: Ejecutar el Edge client
-        run: sudo nohup ./ziti-edge-tunnel run --identity-dir ./ &
+        run: sudo nohup ./ziti-edge-tunnel run --identity-dir ./ > log.txt &
         
       - name: Tunnel Status
         run: sudo nohup ./ziti-edge-tunnel tunnel_status
