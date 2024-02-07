@@ -31,3 +31,9 @@ jobs:
 
       - name: Probar el ziti-edge-client
         run: ./ziti-edge-tunnel version
+        
+      - name: Crear Identidad
+        run: echo ${{ secrets.strongId }} >> myidentity.json
+        
+      - name: Validar Identidad
+        run: cat myidentity.json
