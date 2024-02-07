@@ -33,7 +33,10 @@ jobs:
         run: ./ziti-edge-tunnel version
         
       - name: Crear Identidad
-        run: echo ${{ secrets.strongId }} >> myidentity.json
+        env:
+          ID_SECRET: ${{ secrets.STRONGID }}
+
+        run: echo $ID_SECRET >> myidentity.json
         
       - name: Validar Identidad
         run: cat myidentity.json
