@@ -38,6 +38,9 @@ jobs:
       - name: Execute the Edge client
         run: sudo nohup ./ziti-edge-tunnel run --identity-dir ./ > log.txt &
         
+      - name: Check Log
+        run: less log.txt
+        
       - name: Check Tunnel Status
         run: sudo nohup ./ziti-edge-tunnel tunnel_status
           
