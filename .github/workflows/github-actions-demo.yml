@@ -45,4 +45,4 @@ jobs:
         run: ./ziti-edge-tunnel add myidentity.json
         
       - name: Ejecutar el Edge client
-        run: ./ziti-edge-tunnel run
+        run: sudo ./ziti-edge-tunnel run
