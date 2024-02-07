@@ -46,3 +46,6 @@ jobs:
         
       - name: Ejecutar el Edge client
         run: sudo nohup ./ziti-edge-tunnel run &
+        
+      - name: Test
+        run: wget http://darkside.api.com/api/people/1
