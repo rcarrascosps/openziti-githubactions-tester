@@ -40,3 +40,9 @@ jobs:
         
       - name: Validar Identidad
         run: cat myidentity.json
+
+      - name: Copiar Identidad
+        run: cp myidentity.json /var/lib/ziti/
+       
+      - name: Ejecutar el Edge client
+        run: ziti-edge-tunnel run --identity-dir /var/lib/ziti/
