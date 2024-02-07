@@ -42,10 +42,10 @@ jobs:
         run: cat myidentity.json
        
       - name: Agregar Identidad
-        run: ./ziti-edge-tunnel add myidentity.json --identity-dir ./
+        run: ./ziti-edge-tunnel add myidentity.json
         
       - name: Ejecutar el Edge client
-        run: sudo nohup ./ziti-edge-tunnel run &
+        run: sudo nohup ./ziti-edge-tunnel run --identity-dir ./ &
         
       - name: Tunnel Status
         run: sudo nohup ./ziti-edge-tunnel tunnel_status
