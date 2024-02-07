@@ -41,5 +41,8 @@ jobs:
       - name: Validar Identidad
         run: cat myidentity.json
        
-      - name: Ejecutar el Edge client
+      - name: Agregar Identidad
         run: ./ziti-edge-tunnel add myidentity.json
+        
+      - name: Ejecutar el Edge client
+        run: ./ziti-edge-tunnel run
